@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Imperian Perfumes</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    .hero-section {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(8, 8, 8, 0.5);
+      z-index: 2;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      color: white;
+      text-align: center;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .navbar-nav .nav-link {
+  font-weight: 500;
+  font-size: 14px;
+  margin: 0 8px;
+}
+.product-card {
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+      height: 100%;
+    }
+
+    .product-card:hover {
+      transform: scale(1.03);
+    }
+
+    .product-img {
+      height: 200px;
+      object-fit: contain;
+      margin-bottom: 15px;
+    }
+
+    .product-title {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-price {
+      color: #000;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .add-btn {
+      width: 100%;
+    }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      height: 100%;
+    }
+    .card img {
+      max-height: 200px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+    .price {
+      font-weight: bold;
+      color: #28a745;
+    }
+    .banner-text {
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+    color: chocolate;
+}
+
+    .title {
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    .discover-btn {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 20px;
+    }
+    .discover-btn:hover {
+      background-color: #333;
+    }
+    .product-image {
+      max-width: 100%;
+      height: auto;
+    }
+    .section-title {
+      font-weight: bold;
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+    .section-content {
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+    footer {
+      background-color: #ffffff;
+      padding: 40px 0;
+      color: rgb(0, 0, 0);
+    }
+    .footer-logo {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .social-icons i {
+      font-size: 20px;
+      margin-right: 15px;
+      color: #000000;
+    }
+    .social-icons i:hover {
+      color: #007bff;
+    }
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #faf7f7;
+      font-size: 14px;
+      color: #eae6e6;
+    }
+
+
+  </style>
+</head>
+<body>
+
+<!-- Top bar -->
+<div class="top-bar text-center bg-dark text-white py-1">
+  FREE PERFUME BOX, GIFT BAG & SPRAY TESTER WITH EVERY ORDER. FREE DELIVERY ON ORDERS ABOVE RS.3,600.
+</div>
+
+  <!-- Navbar -->
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">
+      <img src="perfume-bottle.png" alt="Logo" width="30" class="me-2" >
+
+      Imperian <span class="text-muted">N Fragrance</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+        <li class="nav-item"><a class="nav-link text-danger fw-bold" href="#">WEEKLY DEALS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">MEN PERFUMES</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">WOMEN PERFUMES</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">NEW ARRIVALS</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">SCENTED BATH & BODY</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">TESTER BOXES</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">GIFT BOXES</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">PERFUME ROLL ON</a></li>
+      </ul>
+    </div>
+    
+    <div class="d-flex">
+      <a href="#" class="me-3 text-dark"><i class="bi bi-person"></i></a>
+      <a href="#" class="text-dark"><i class="bi bi-cart"></i></a>
+    </div>
+  </div>
+</nav>
+
+
+  <section class="hero-section">
+    <video autoplay muted loop class="hero-video">
+      <source src="Yellow Beige Minimalist Modern Fragrance YouTube Thumbnail.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </section>
+  <div class="container my-5">
+    <h2 class="text-center mb-4">WEEKLY DEALS</h2>
+
+  <div class="container my-5">
+    <div class="row g-4">
+      <!-- Product 1 -->
+      <div class="col-md-4">
+        <div class="product-card">
+          <img src="zarar_bleu_resized_3_.webp" class="product-img" alt="Janan Vanilla">
+          <div class="product-title">zarar blue</div>
+          <div class="product-price">PKR 7,100.00</div>
+          <button class="btn btn-dark add-btn">ADD TO BAG</button>
+        </div>
+      </div>
+      <!-- Product 2 -->
+      <div class="col-md-4">
+        <div class="product-card">
+          <img src="Untitleddesign-2024-04-25T113227.436.webp" class="product-img" alt="Black Musk">
+          <div class="product-title">Lattafa Khamrah 100ml EDP</div>
+          <div class="product-price">PKR 2,200.00</div>
+          <button class="btn btn-dark add-btn">ADD TO BAG</button>
+        </div>
+      </div>
+      <!-- Product 3 -->
+      <div class="col-md-4">
+        <div class="product-card">
+          <img src="yara.jpg" class="product-img" alt="Janan Tobacco">
+          <div class="product-title">Yara Candy Perfume 100ml</div>
+          <div class="product-price">PKR 7,100.00</div>
+          <button class="btn btn-dark add-btn">ADD TO BAG</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-4">
+    <h2 class="text-center mb-4">Best Sellers</h2>
+    <div class="row g-4">
+      <!-- Perfume Item -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card">
+          <img src="Elie_Saab_Essence_No.4_Oud_EDP_100ml_Online_in_Pakistan.webp" alt="Khamrah">
+          <h6>ELIE SAAB ESSENCE NO.4 OUD EDP 100ML</h6>
+          <p class="price">24,900.00</p>
+          <button class="btn btn-dark add-btn">ADD TO BAG</button>
+        </div>
+      </div>
+      <!-- Perfume Item -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card">
+          <img src="centurion.webp" alt="Yara Candy">
+          <h6>Centurion Perfume For Men</h6>
+          <p class="price">PKR 3,593</p>
+          <button class="btn btn-dark add-btn">ADD TO BAG</button>
+        </div>
+      </div>
+      <!-- Perfume Item -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card">
+          <img src="Dior_Purple_Oud_7.5ml_Online_in_Pakistan.webp" alt="Yara Pink">
+          <h6>Dior Purple Oud 7.5ml in Pakistan</h6>
+          <p class="price">PKR10,000.00</p>
+          <button class="btn btn-dark add-btn">ADD TO BAG</button>
+        </div>
+      </div>
+      <!-- Perfume Item -->
+      <div class="col-md-4 col-lg-3">
+        <div class="card">
+          <img src="riddle_woman_1_.webp" alt="Barakkat Rouge">
+          <h6>Riddle Perfume For Women</h6>
+          <p class="price">PKR14,100.0</p>
+          <button class="btn btn-dark add-btn">ADD TO BAG</button>
+        </div>
+      </div>
+      <!-- More items can be added here -->
+    </div>
+  </div>
+  <div class="container-fluid p-0">
+    <div class="position-relative">
+        <img src="What-Types-of-Perfumes-Last-the-Longest.jpg" alt="Aura Fresh Banner" class="img-fluid w-100">
+        </div>
+    </div>
+</div>
+<div class="container py-5">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <h1 class="title">BUCEPHALUS BY ARMAF</h1>
+      <p class="mt-3">
+        A tribute to Glory, Grandeur, & Nobility…<br><br>
+        <strong>Bucephalus:</strong><br>
+        The New Magnificent Collection by Armaf –<br>
+        A bold, citrusy and daring scent with a floral heart and the musky warmth of patchouli… <br>
+        <strong>Bucephalus IX</strong> – a tribute to grandeur!<br><br>
+        A blend of citrus & spice sweetened by tempting aromas of lavender and cinnamon with a passionately rich base of patchouli and labdanum…<br>
+        <strong>Bucephalus X</strong> – a tribute to glory!<br><br>
+        A magnificent manifestation of freshness & sophistication that soothes your way into the fabulously floral fragrance of rose & jasmine, climaxing to a charmingly sensual base of musk, vanilla & ambergris…<br>
+        <strong>Bucephalus XI</strong> – a tribute to nobility!
+      </p>
+      <button class="discover-btn">DISCOVER</button>
+    </div>
+    <div class="col-md-6 text-center">
+      <img src="bucephalus_1000x750px_1a.webp" alt="Bucephalus Perfume" class="product-image">
+    </div>
+  </div>
+</div>
+<div class="container my-5">
+  <h2 class="text-center mb-4">NEW ARRIVALS</h2>
+  <div class="row g-4">
+    <!-- Product 1 -->
+    <div class="col-md-4">
+      <div class="product-card">
+        <img src="Romanian_Blue-_Gift_Box.webp" class="product-img" alt="Janan Vanilla">
+        <div class="product-title">Romanian Blue Body Care Set</div>
+        <div class="product-price">PKR 7,100.00</div>
+        <button class="btn btn-dark add-btn">ADD TO BAG</button>
+      </div>
+    </div>
+    <!-- Product 2 -->
+    <div class="col-md-4">
+      <div class="product-card">
+        <img src="Cuban_Cocktail-_Gift_Box.webp" class="product-img" alt="Black Musk">
+        <div class="product-title">Cuban Cocktail Body Care Set</div>
+        <div class="product-price">PKR 3,200.00</div>
+        <button class="btn btn-dark add-btn">ADD TO BAG</button>
+      </div>
+    </div>
+    <!-- Product 3 -->
+    <div class="col-md-4">
+      <div class="product-card">
+        <img src="The_Queen-_Gift_Box (1).webp" class="product-img" alt="Janan Tobacco">
+        <div class="product-title">The Queen Body Care Set</div>
+        <div class="product-price">PKR 7,100.00</div>
+        <button class="btn btn-dark add-btn">ADD TO BAG</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container my-5">
+  <div class="row g-4">
+    <!-- Product 4 -->
+    <div class="col-md-4">
+      <div class="product-card">
+        <img src="Harmony_-_Gift_Box.webp" class="product-img" alt="Janan Vanilla">
+        <div class="product-title">Harmony Body Care Set</div>
+        <div class="product-price">PKR 7,100.00</div>
+        <button class="btn btn-dark add-btn">ADD TO BAG</button>
+      </div>
+    </div>
+    <!-- Product 5 -->
+    <div class="col-md-4">
+      <div class="product-card">
+        <img src="OUD_-_Gift_Box.webp" class="product-img" alt="Black Musk">
+        <div class="product-title">I Love Oud Body Care Set</div>
+        <div class="product-price">PKR 4,290.00</div>
+        <button class="btn btn-dark add-btn">ADD TO BAG</button>
+      </div>
+    </div>
+    <!-- Product 6 -->
+    <div class="col-md-4">
+      <div class="product-card">
+        <img src="Rose_Vault-_Gift_Box.webp" class="product-img" alt="Janan Tobacco">
+        <div class="product-title">Rose Vault Body Care Set</div>
+        <div class="product-price">PKR 6,100.00</div>
+        <button class="btn btn-dark add-btn">ADD TO BAG</button>
+      </div>
+    </div>
+  </div>
+</div>
+<h2 class="section-title">Best Perfumes for Men</h2>
+  <div class="section-content">
+    <p>
+      At Imperian N Perfumes, our collection features 40 premium fragrances designed to leave a lasting impression.
+      From the elegant Ocean Floor inspired by Bleu De Chanel to the irresistible Cuban Cocktail inspired by Aventus,
+      our perfumes will take you on a sensory journey you won’t forget. And with our affordable prices, you don’t have
+      to break the bank to smell amazing.
+    </p>
+  </div>
+
+  <h2 class="section-title">Best Perfumes for Women</h2>
+  <div class="section-content">
+    <p>
+      Experience the ultimate indulgence with Imperian N Perfumes exquisite perfumes for women selection. Our collection is
+      inspired by the most iconic fragrances, offering luxurious scents at affordable prices. From the classic Marilyn Monroe
+      inspired by Chanel Cocodamemoiselle for Women to the seductive Beach View for Women inspired by Versace Bright Crystal,
+      we have a perfume for every occasion.
+    </p>
+  </div>
+  <h2 class="section-title">Body and Bath Collection</h2>
+  <div class="section-content">
+    <p>
+      Unwind and indulge in a luxurious spa-like experience right in the comfort of your own home with our Body and Bath Collection.
+      Our premium scented body wash, body lotion, and body mist will leave your skin feeling soft, silky, and fragrant.
+      Light our beautifully scented candles to create a warm and inviting atmosphere, and let the heavenly aroma envelop your senses.
+      With a range of scents to choose from, you’re sure to find the perfect match for your mood.
+    </p>
+  </div>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <!-- Logo -->
+        <div class="col-md-3 mb-4">
+          <img src="perfume-bottle.png" alt="Logo" width="30" class="me-2" >
+          <div class="footer-logo">Imperian <br><span style="letter-spacing: 3px;">N Fragrance</span></div>
+        </div>
+  
+        <!-- Order Info -->
+        <div class="col-md-3 mb-4">
+          <h5>ORDER INFO</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">PostEx Order Tracking</a></li>
+            <li><a href="#">Trax Order Tracking</a></li>
+            <li><a href="#">Return and Exchange</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Refund & Exchange policy</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Our Outlets</a></li>
+          </ul>
+        </div>
+  
+        <!-- Newsletter & Social -->
+        <div class="col-md-3 mb-4">
+          <h5>SIGN UP AND SAVE</h5>
+          <p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>
+          <input type="email" class="form-control mb-2" placeholder="Enter your email">
+          <div class="social-icons">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-tiktok"></i>
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+          <div class="mt-2">
+            <img src="https://img.icons8.com/color/48/000000/visa.png" width="40"/>
+            <img src="https://img.icons8.com/color/48/000000/mastercard.png" width="40"/>
+          </div>
+        </div>
+  
+        <!-- Contact Info -->
+        <div class="col-md-3 mb-4">
+          <h5>CHAT WITH US</h5>
+          <p>Monday - Saturday: 11am - 10pm PST<br>Sunday: 2pm - 11pm PST</p>
+          <p>Call us at: <br>‪+92 347 7433406‬</p>
+          <p>Customer Support:<br><a href="mailto:support@scentsnsecrets.com">support@Imperian Perfumes.com</a></p>
+          <p>Business Queries:<br><a href="mailto:info@scentsnsecrets.com">info@Imperian Perfumes.com</a></p>
+        </div>
+      </div>
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      &copy; 2025 Imperian Perfumes
+    </div>
+  </div>
+</footer
+
+   
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
